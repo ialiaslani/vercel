@@ -7,7 +7,7 @@
 
     <!-- Nav -->
     <ul class="flex items-center justify-between mas-w-6xl mx-auto lg:px-0">
-      <template v-for="(n, i) in nav" :key="n.text">
+      <template v-for="n in nav" :key="n.text">
         <li class="px-5">
           <NuxtLink :to="n.link">
             {{n.text}}
@@ -17,7 +17,7 @@
     </ul>
 
     <!-- Signups -->
-    <div class="flex items-center justify-between mas-w-6xl mx-auto lg:px-0">
+    <div class="flex items-center justify-end mas-w-6xl lg:px-0">
       <template v-for="(n, i) in signups" :key="n.text">
         <NuxtLink :to="n.link">
           <button class="px-5 py-2" :class="n.link === 'signup' ? 'bg-black text-white rounded' : ''">
